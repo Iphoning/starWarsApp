@@ -10,5 +10,6 @@ angular.module('starWarsApp', [
     'giphy',
     'characterDetail',
     'characterList',
-    'ne.swapi'
+    'ne.swapi',
+    'urlFilter'
 ]);
