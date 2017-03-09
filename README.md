@@ -18,6 +18,4 @@ run in console
 ```shell
 bower install
 ```
-## Working directory
-
-Copy the dist directory to the root of your web server
+[view demo](https://iphoning.github.io/starWarsApp.io/dist "StarWarsApp")
