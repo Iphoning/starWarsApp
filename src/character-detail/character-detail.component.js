@@ -8,13 +8,14 @@ angular.
 module('characterDetail').
 component('characterDetail', {
     templateUrl: 'character-detail/character-detail.template.html',
-    controller: ['$routeParams', 'Giphy', 'swapi',
+    controller: ['$routeParams', 'Giphy', 'swapi', 'urlFilter',
         function CharacterDetailController($routeParams, Giphy, swapi) {
             var self = this;
 
             self.fillObjects = function(obj, urls) {
                 self[obj] = [];
                 urls.forEach(function(url) {
+                    url = urlFilter(url);
                     swapi.get(url).then(function(res) {
                         var arr = res.url.match( /\d+/i );
                         res.id = arr[0];

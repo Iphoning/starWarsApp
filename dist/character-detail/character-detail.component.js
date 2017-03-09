@@ -15,6 +15,7 @@ component('characterDetail', {
             self.fillObjects = function(obj, urls) {
                 self[obj] = [];
                 urls.forEach(function(url) {
+                    url =
                     swapi.get(url).then(function(res) {
                         var arr = res.url.match( /\d+/i );
                         res.id = arr[0];

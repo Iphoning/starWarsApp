@@ -5,7 +5,7 @@
     <ul class="characters clearfix">
         <li ng-repeat="char in $ctrl.characters" class="thumbnail character-list-item">
             <a href="#!/characters/{{char.id}}" class="thumb">
-                <img ng-src="{{char.imageUrl}}" alt="{{char.name}}">
+                <img ng-src="{{char.imageUrl | urlFilter}}" alt="{{char.name}}">
             </a>
             <a href="#!/characters/{{char.id}}">{{char.name}}</a>
         </li>
