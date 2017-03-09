@@ -42,7 +42,7 @@ module.exports = function(grunt) {
                         "bower_components/angular-resource/angular-resource.min.js",
                         "bower_components/angular-route/angular-route.min.js",
                         "bower_components/ne-swapi/dist/ne-swapi.min.js",
-                        "src/filters/url-filter.js",
+                        "src/filters/url.filter.js",
                         "src/assets/js/app.module.js",
                         "src/assets/js/app.config.js",
                         "src/assets/js/app.animations.js",
