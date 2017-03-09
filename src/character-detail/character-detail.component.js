@@ -9,7 +9,7 @@ module('characterDetail').
 component('characterDetail', {
     templateUrl: 'character-detail/character-detail.template.html',
     controller: ['$routeParams', 'Giphy', 'swapi', 'urlFilter',
-        function CharacterDetailController($routeParams, Giphy, swapi) {
+        function CharacterDetailController($routeParams, Giphy, swapi, urlFilter) {
             var self = this;
 
             self.fillObjects = function(obj, urls) {
