@@ -1,0 +1,82 @@
+<h1 class="h1 text-center">Star Wars</h1>
+
+<ol class="breadcrumb">
+    <li><a href="#!/characters/page/1">Star Wars</a></li>
+    <li class="active">{{$ctrl.character.name}}</li>
+</ol>
+
+<div class="character media">
+    <div class="media-body">
+
+        <div class="panel panel-default" ng-show="$ctrl.films.length">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Describe</div>
+
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Species</strong>
+                    <span>{{$ctrl.species[0].name}}</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Name</strong>
+                    <span>{{$ctrl.character.name}}</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Height</strong>
+                    <span>{{$ctrl.character.height}}</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Mass</strong>
+                    <span>{{$ctrl.character.mass}}</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Hair color</strong>
+                    <span>{{$ctrl.character.hair_color}}</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Skin color</strong>
+                    <span>{{$ctrl.character.skin_color}}</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Eye color</strong>
+                    <span>{{$ctrl.character.eye_color}}</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Birth year</strong>
+                    <span>{{$ctrl.character.birth_year}}</span>
+                </li>
+                <li class="list-group-item">
+                    <strong>Gender</strong>
+                    <span>{{$ctrl.character.gender}}</span>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="panel panel-default" ng-show="$ctrl.films.length">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Films</div>
+
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="(key, val) in $ctrl.films">
+                    <a href="#!/characters/filter/films/{{val.id}}/page/1">{{val.title}}</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="panel panel-default" ng-show="$ctrl.vehicles.length">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Vehicles</div>
+
+            <ul class="list-group">
+                <li class="list-group-item" ng-repeat="(key, val) in $ctrl.vehicles">
+                    <a href="#!/characters/filter/vehicles/{{val.id}}/page/1">{{val.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="media-right">
+        <img ng-src="{{$ctrl.imageUrl}}" alt="{{$ctrl.character.name}}">
+    </div>
+</div>

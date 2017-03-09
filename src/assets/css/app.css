@@ -1,0 +1,78 @@
+@charset "UTF-8";
+* {
+  font-family: 'STARWARS', sans-serif; }
+
+body {
+  color: yellow;
+  background: url(../img/back.jpg) no-repeat;
+  background-size: cover; }
+
+.breadcrumb {
+  background: rgba(0, 0, 0, 0.9); }
+
+.pagination > li > a, .pagination > li > span {
+  border: 1px solid yellow;
+  color: yellow; }
+  .pagination > li > a:hover, .pagination > li > span:hover {
+    background: yellow; }
+
+.pagination > li > span, .pagination > li.active > a {
+  background: yellow; }
+
+.pagination > li > a {
+  background: #000; }
+
+a, a:focus, a:active, a:hover {
+  color: yellow; }
+
+.list-group-item {
+  background: rgba(0, 0, 0, 0.7); }
+  .list-group-item a {
+    text-decoration: underline; }
+    .list-group-item a:hover {
+      text-decoration: none; }
+  .list-group-item strong {
+    display: inline-block;
+    min-width: 20%; }
+
+.panel {
+  background: none; }
+
+.panel-default > .panel-heading {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.9);
+  font-size: 20px; }
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+  background-color: yellow;
+  border-color: yellow;
+  color: #000; }
+
+.h1 {
+  color: #000;
+  -webkit-text-fill-color: #000;
+  /* цвет текста для webkit */
+  -webkit-text-stroke: 1px yellow;
+  text-shadow: -1px -1px 0 yellow, 1px -1px 0 yellow, -1px 1px 0 yellow, 1px 1px 0 yellow; }
+
+.thumbnail a.thumb {
+  width: 140px;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  background: #000;
+  height: 100px; }
+  .thumbnail a.thumb > img {
+    max-height: 100px; }
+
+.characters {
+  padding: 0; }
+  .characters .thumbnail {
+    vertical-align: top;
+    display: inline-block;
+    margin: 1em;
+    padding: 0 0 10px 0;
+    background: #000;
+    border-color: #000;
+    width: 140px;
+    text-align: center; }

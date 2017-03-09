@@ -1,0 +1,33 @@
+<div class="text-center character">
+    <h1 ng-show="!$ctrl.filtername" class="h1">Star Wars</h1>
+    <h1 ng-show="$ctrl.filtername != ''" class="h1">{{$ctrl.filtername}}</h1>
+
+    <ul class="characters clearfix">
+        <li ng-repeat="char in $ctrl.characters" class="thumbnail character-list-item">
+            <a href="#!/characters/{{char.id}}" class="thumb">
+                <img ng-src="{{char.imageUrl}}" alt="{{char.name}}" />
+            </a>
+            <a href="#!/characters/{{char.id}}">{{char.name}}</a>
+        </li>
+    </ul>
+
+    <nav ng-show="$ctrl.pages_count > 1" aria-label="Page navigation">
+        <ul class="pagination">
+            <li ng-show="$ctrl.page != 1">
+                <a href="{{$ctrl.base_url}}/page/{{$ctrl.page - 1}}" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+
+            <li ng-repeat="page in $ctrl.pages" ng-class="{active: $index + 1 == $ctrl.page}">
+                <a href="{{page.url}}">{{page.num}}</a>
+            </li>
+
+            <li ng-show="$ctrl.page != $ctrl.pages_count">
+                <a href="{{$ctrl.base_url}}/page/{{$ctrl.page + 1}}" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
