@@ -8,8 +8,8 @@ angular.
 module('characterList').
 component('characterList', {
     templateUrl: 'character-list/character-list.template.html',
-    controller: [ '$routeParams', 'Giphy', 'swapi',
-        function CharacterListController($routeParams, Giphy, swapi) {
+    controller: [ '$routeParams', 'Giphy', 'swapi', 'urlFilter',
+        function CharacterListController($routeParams, Giphy, swapi, urlFilter) {
             var self = this;
             self.page = +$routeParams.page;
             self.per_page = 10;
@@ -48,6 +48,7 @@ component('characterList', {
                     self.characters = [];
                     var chars = res.characters.splice(((self.page - 1) * self.per_page), self.per_page);
                     chars.forEach(function (url) {
+                        url = urlFilter(url);
                         swapi.get(url).then(function (char) {
                             self.characters.push(char);
                             self.postFilter(self.characters[self.characters.length - 1]);

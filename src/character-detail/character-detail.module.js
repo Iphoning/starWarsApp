@@ -7,6 +7,5 @@
 angular.module('characterDetail', [
     'ngRoute',
     'giphy',
-    'ne.swapi',
-    'urlFilter'
+    'ne.swapi'
 ]);
